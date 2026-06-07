@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- MySQL Driver -->
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+
+        <!-- Database URL -->
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/hibernate_practice
+        </property>
+
+        <!-- MySQL Username -->
+        <property name="hibernate.connection.username">
+            root
+        </property>
+
+        <!-- MySQL Password -->
+        <property name="hibernate.connection.password">
+            Aafaq#21
+        </property>
+
+        <!-- SQL Dialect -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <!-- Show SQL Queries -->
+        <property name="hibernate.show_sql">
+            true
+        </property>
+
+        <!-- Auto Table Update -->
+        <property name="hibernate.hbm2ddl.auto">
+            update
+        </property>
+
+        <!-- Entity Class -->
+        <mapping class="org.aafaq.entity.Workers"/>
+
+    </session-factory>
+
+</hibernate-configuration>
